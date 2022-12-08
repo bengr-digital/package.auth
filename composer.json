@@ -1,0 +1,35 @@
+{
+    "name": "bengr/auth",
+    "description": "Bengr auth package that can implement multiple authentication and authorization strategies",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "matejkrenek",
+            "email": "mate23.krenek@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Bengr\\Auth\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Bengr\\Auth\\AuthServiceProvider"
+            ],
+            "aliases": {
+                "Auth": "Bengr\\Auth\\Facades\\Auth"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require-dev": {
+        "orchestra/testbench": "^7.13"
+    },
+    "require": {
+        "spatie/laravel-package-tools": "^1.13"
+    }
+}
