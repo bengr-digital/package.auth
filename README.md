@@ -1,4 +1,4 @@
-# Auth
+# Auth Package 📦
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/bengr/auth.svg?style=flat-square)](https://packagist.org/packages/bengr/auth)
 [![Total Downloads](https://img.shields.io/packagist/dt/bengr/auth.svg?style=flat-square)](https://packagist.org/packages/bengr/auth)
