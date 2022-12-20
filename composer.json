@@ -18,10 +18,7 @@
         "laravel": {
             "providers": [
                 "Bengr\\Auth\\AuthServiceProvider"
-            ],
-            "aliases": {
-                "Auth": "Bengr\\Auth\\Facades\\Auth"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",
