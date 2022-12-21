@@ -2,8 +2,8 @@
 
 namespace Bengr\Auth;
 
-use Bengr\Auth\Facades\Auth;
 use Illuminate\Auth\RequestGuard;
+use Illuminate\Support\Facades\Auth;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -16,6 +16,7 @@ class AuthServiceProvider extends PackageServiceProvider
 
     public function packageBooted()
     {
+        $this->configureGuard();
     }
 
     /**
