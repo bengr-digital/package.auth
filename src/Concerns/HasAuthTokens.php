@@ -10,8 +10,6 @@ trait HasAuthTokens
 {
     protected $accessToken;
 
-
-
     public function tokens()
     {
         return $this->morphMany(AuthToken::class, 'tokenable');

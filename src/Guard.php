@@ -4,7 +4,7 @@ namespace Bengr\Auth;
 
 use Illuminate\Http\Request;
 use Illuminate\Contracts\Auth\Factory as AuthFactory;
-use App\Modules\Guard\Traits\HasAuthTokens;
+use Bengr\Auth\Concerns\HasAuthTokens;
 
 class Guard
 {
