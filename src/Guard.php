@@ -39,6 +39,7 @@ class Guard
     public function __invoke(Request $request)
     {
         if ($token = $this->getTokenFromRequest($request)) {
+
             $model = config('auth.tokens')[$this->provider]['model'];
             $accessToken = $model::findToken($token);
 
@@ -84,7 +85,6 @@ class Guard
         }
 
 
-
         $isValid =
             (!$this->expiration || $accessToken->created_at->gt(now()->subMinutes($this->expiration)))
             && (!$accessToken->expires_at || !$accessToken->expires_at->isPast())
@@ -100,8 +100,8 @@ class Guard
             return true;
         }
 
-        $model = config("auth.providers.{$this->provider}.model");
 
+        $model = config("auth.providers.{$this->provider}.model");
 
         return $tokenable instanceof $model;
     }
