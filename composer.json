@@ -11,7 +11,8 @@
     ],
     "autoload": {
         "psr-4": {
-            "Bengr\\Auth\\": "src/"
+            "Bengr\\Auth\\": "src/",
+            "Bengr\\Auth\\Tests\\": "tests/"
         }
     },
     "extra": {
@@ -21,12 +22,15 @@
             ]
         }
     },
+    "scripts": {
+        "test": "phpunit"
+    },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require-dev": {
         "orchestra/testbench": "^7.13"
     },
     "require": {
-        "spatie/laravel-package-tools": "^1.13"
+        "spatie/laravel-package-tools": "^1.15"
     }
 }
