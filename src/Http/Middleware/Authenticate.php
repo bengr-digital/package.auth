@@ -7,8 +7,6 @@ use Illuminate\Auth\AuthenticationException;
 use Illuminate\Contracts\Auth\Factory as Auth;
 use Illuminate\Contracts\Auth\Middleware\AuthenticatesRequests;
 
-use function Bengr\Support\response;
-
 class Authenticate implements AuthenticatesRequests
 {
     /**
@@ -54,6 +52,6 @@ class Authenticate implements AuthenticatesRequests
             }
         }
 
-        return response()->throw(AuthenticationException::class);
+        throw new AuthenticationException();
     }
 }

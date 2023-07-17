@@ -6,8 +6,6 @@ use Bengr\Auth\Exceptions\AlreadyAuthenticatedException;
 use Closure;
 use Illuminate\Http\Request;
 
-use function Bengr\Support\response;
-
 class EnsureIsNotAuthenticated
 {
     /**
@@ -24,7 +22,7 @@ class EnsureIsNotAuthenticated
 
         foreach ($guards as $guard) {
             if (auth()->guard($guard)->check()) {
-                return response()->throw(AlreadyAuthenticatedException::class);
+                throw new AlreadyAuthenticatedException();
             }
         }
 
